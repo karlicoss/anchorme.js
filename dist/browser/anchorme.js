@@ -141,7 +141,7 @@
 	var email_address = "([a-z0-9!#$%&'*+=?^_`{|}~-]+(\\.[a-z0-9!#$%&'*+=?^_`{|}~-]+)*)";
 	var domainWithTLD = "([a-z0-9]+(-+[a-z0-9]+)*\\.)+(" + dictionary.TLDs + ")";
 	var domainWithAnyTLD = "([a-z0-9]+(-+[a-z0-9]+)*\\.)+([a-z0-9][a-z0-9-]{0," + (Math.max.apply(commonjsGlobal, dictionary.TLDs.split("|").map(function (x) { return x.length; })) - 2) + "}[a-z0-9])";
-	var allowedInPath = "a-zA-Z\\d\\-._~\\!$&*+,;=:@%'\"\\[\\]()";
+	var allowedInPath = "a-zA-Z\\d\\-._~\\!$&*+,;=:@%'\"()";
 	var path = "(((\\/(([" + allowedInPath + "]+(\\/[" + allowedInPath + "]*)*))?)?)((\\?([" + allowedInPath + "\\/?]*))?)((\\#([" + allowedInPath + "\\/?]*))?))?";
 	var ipv4 = "((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)";
 	var ipv6 = "\\[(([a-f0-9:]+:+)+[a-f0-9]+)\\]";
